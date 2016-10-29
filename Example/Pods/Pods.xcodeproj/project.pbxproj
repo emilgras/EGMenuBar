@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DBFCEF2901FC0D37C38E186D3C5FB46 /* EGMenuBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6073AEECB29AC1F6BD7A700CD0ECB1CF /* EGMenuBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D0966253A8C9E42C09DDDA84A4B685A /* EGMenuBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84F2F2352A29E55BD0C2BEC896345655 /* EGMenuBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		212C06E98B36D1A3D6FFE5B55DCA6A1F /* Pods-EGMenuBar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49DE2B4F2473D2784E46AD4005EB80D6 /* Pods-EGMenuBar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		427D452BB8574A99D26CB65D0B90E386 /* EGMenuBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D91DC6AC09B232933F8526684E4AB3B8 /* EGMenuBar-dummy.m */; };
-		52070CC817405ADF9396B16290453DCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		AC05CB139F773E23A5155F073A1A75B2 /* EGMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333553CDDBB51634116268A69337C89 /* EGMenuBar.swift */; };
+		9DC0DF07A2B4DB60D4C090C96354E7B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		B78A4C36874FA27893549F9902534DF2 /* EGMenuBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DABCF22532E4065D30144B3EA5C013AE /* EGMenuBar-dummy.m */; };
+		C2D5CED9ACE77BDFAE47CF034B29274A /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE0DEE4B044C4110D831F008D0377FA /* ReplaceMe.swift */; };
 		CA506ADA822DCB320B3E73272697EF0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		D06B7113F0CA6FBE9B134D81FEE85D69 /* EGMenuBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EB051DA6236783679DBD7F16F7656B /* EGMenuBarItem.swift */; };
 		FA702102C72CE40430587BF313D28814 /* Pods-EGMenuBar_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A40AB90F224844703AEFCCE7AB9BA00 /* Pods-EGMenuBar_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -22,42 +21,41 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1B88B15CD672A9FCA31DAB357918EECE;
+			remoteGlobalIDString = 83AF973B33D46AFFC8F5B1B3725E207E;
 			remoteInfo = EGMenuBar;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1112128F41876D9A112A130F4024D2E8 /* EGMenuBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EGMenuBar.xcconfig; sourceTree = "<group>"; };
+		0C79047C30C45AD3738E5FBD5B788502 /* EGMenuBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EGMenuBar.modulemap; sourceTree = "<group>"; };
 		11AC06BA82750C36C1395E8EB7D11856 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20E97D4AF729812685A1524F84BC5A59 /* EGMenuBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EGMenuBar.xcconfig; sourceTree = "<group>"; };
 		2F64268D2EE40D7EA00813DAF4615724 /* Pods-EGMenuBar_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EGMenuBar_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3F89A66A5C7C53A8E7C8237106EF9858 /* Pods-EGMenuBar_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EGMenuBar_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		49DE2B4F2473D2784E46AD4005EB80D6 /* Pods-EGMenuBar_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EGMenuBar_Example-umbrella.h"; sourceTree = "<group>"; };
-		5536EA00EBC9159D2654E4EA33411DF9 /* EGMenuBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EGMenuBar-prefix.pch"; sourceTree = "<group>"; };
-		56DADB898BE14C89EDEDFBFB8F072C12 /* EGMenuBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EGMenuBar.modulemap; sourceTree = "<group>"; };
 		5BB5B43F6ABB6CE85C0BBDB207AD49F2 /* Pods_EGMenuBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGMenuBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D3F9FBF1FFAD653787A926567F475D2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6073AEECB29AC1F6BD7A700CD0ECB1CF /* EGMenuBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EGMenuBar-umbrella.h"; sourceTree = "<group>"; };
 		71F1553B3FF34BFF6F6094DDBFD64F2C /* Pods-EGMenuBar_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EGMenuBar_Example.modulemap"; sourceTree = "<group>"; };
+		84F2F2352A29E55BD0C2BEC896345655 /* EGMenuBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EGMenuBar-umbrella.h"; sourceTree = "<group>"; };
 		8DEDFB17AC5BF273E87703966A273806 /* Pods-EGMenuBar_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EGMenuBar_Example-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A40AB90F224844703AEFCCE7AB9BA00 /* Pods-EGMenuBar_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EGMenuBar_Example-dummy.m"; sourceTree = "<group>"; };
 		9AB5384669BD63E60E366C3F3C34B968 /* Pods-EGMenuBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EGMenuBar_Example.release.xcconfig"; sourceTree = "<group>"; };
-		A333553CDDBB51634116268A69337C89 /* EGMenuBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EGMenuBar.swift; sourceTree = "<group>"; };
 		A6891AEA7490192B576715FC8486F2FF /* Pods-EGMenuBar_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EGMenuBar_Example-frameworks.sh"; sourceTree = "<group>"; };
+		BFD294E7485B112968F189E599C93A75 /* EGMenuBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EGMenuBar-prefix.pch"; sourceTree = "<group>"; };
 		C33DFA445E75B58790F00826DEC969BB /* Pods-EGMenuBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EGMenuBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C9EB051DA6236783679DBD7F16F7656B /* EGMenuBarItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EGMenuBarItem.swift; sourceTree = "<group>"; };
+		CCEBB70C3340DEBACEB4A1E7378C28F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD491FF856BC12086772447AA6FDD1AC /* EGMenuBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EGMenuBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D91DC6AC09B232933F8526684E4AB3B8 /* EGMenuBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EGMenuBar-dummy.m"; sourceTree = "<group>"; };
+		DABCF22532E4065D30144B3EA5C013AE /* EGMenuBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EGMenuBar-dummy.m"; sourceTree = "<group>"; };
+		FFE0DEE4B044C4110D831F008D0377FA /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = EGMenuBar/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		841DD256969786BB57436076D3BB4559 /* Frameworks */ = {
+		8AB0CA8D954AA3B41B80C86A887E3ABB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52070CC817405ADF9396B16290453DCE /* Foundation.framework in Frameworks */,
+				9DC0DF07A2B4DB60D4C090C96354E7B4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,20 +70,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		044B679A0480B0BC3445A7FF5907E80B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				56DADB898BE14C89EDEDFBFB8F072C12 /* EGMenuBar.modulemap */,
-				1112128F41876D9A112A130F4024D2E8 /* EGMenuBar.xcconfig */,
-				D91DC6AC09B232933F8526684E4AB3B8 /* EGMenuBar-dummy.m */,
-				5536EA00EBC9159D2654E4EA33411DF9 /* EGMenuBar-prefix.pch */,
-				6073AEECB29AC1F6BD7A700CD0ECB1CF /* EGMenuBar-umbrella.h */,
-				5D3F9FBF1FFAD653787A926567F475D2 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/EGMenuBar";
-			sourceTree = "<group>";
-		};
 		0A78F96EE12B4D2EEF4F79BFF14D74C6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,15 +77,6 @@
 				5BB5B43F6ABB6CE85C0BBDB207AD49F2 /* Pods_EGMenuBar_Example.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		11654830BD8C128E61614AFAB02C0CFE /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				A333553CDDBB51634116268A69337C89 /* EGMenuBar.swift */,
-				C9EB051DA6236783679DBD7F16F7656B /* EGMenuBarItem.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		1E689E37CFF79AEE9AC5824DDBE852B2 /* Pods-EGMenuBar_Example */ = {
@@ -122,6 +97,20 @@
 			path = "Target Support Files/Pods-EGMenuBar_Example";
 			sourceTree = "<group>";
 		};
+		3AE3FBC4568A56EEB4291B59DE192452 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C79047C30C45AD3738E5FBD5B788502 /* EGMenuBar.modulemap */,
+				20E97D4AF729812685A1524F84BC5A59 /* EGMenuBar.xcconfig */,
+				DABCF22532E4065D30144B3EA5C013AE /* EGMenuBar-dummy.m */,
+				BFD294E7485B112968F189E599C93A75 /* EGMenuBar-prefix.pch */,
+				84F2F2352A29E55BD0C2BEC896345655 /* EGMenuBar-umbrella.h */,
+				CCEBB70C3340DEBACEB4A1E7378C28F5 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/EGMenuBar";
+			sourceTree = "<group>";
+		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,38 +127,29 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5FFB17BF494E5951AF4949AF6D89FDB6 /* EGMenuBar */ = {
+		5CB14F7208BE60115D24732C02E8D62D /* EGMenuBar */ = {
 			isa = PBXGroup;
 			children = (
-				7A6DF02D13AF684AB017FF86D4ECB509 /* EGMenuBar */,
-				044B679A0480B0BC3445A7FF5907E80B /* Support Files */,
-			);
-			name = EGMenuBar;
-			path = /Users/emilgras/Desktop/EGMenuBar;
-			sourceTree = "<absolute>";
-		};
-		6F2673131170A02E893AA6F191D2FD1E /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5FFB17BF494E5951AF4949AF6D89FDB6 /* EGMenuBar */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		7A6DF02D13AF684AB017FF86D4ECB509 /* EGMenuBar */ = {
-			isa = PBXGroup;
-			children = (
-				11654830BD8C128E61614AFAB02C0CFE /* Classes */,
+				FFE0DEE4B044C4110D831F008D0377FA /* ReplaceMe.swift */,
+				3AE3FBC4568A56EEB4291B59DE192452 /* Support Files */,
 			);
 			path = EGMenuBar;
+			sourceTree = "<group>";
+		};
+		619865E597E0527BAF6EAF0ED5340D2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CB14F7208BE60115D24732C02E8D62D /* EGMenuBar */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				6F2673131170A02E893AA6F191D2FD1E /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				619865E597E0527BAF6EAF0ED5340D2F /* Pods */,
 				0A78F96EE12B4D2EEF4F79BFF14D74C6 /* Products */,
 				465DEE4AD16338520501BBA68C37E6C6 /* Targets Support Files */,
 			);
@@ -186,11 +166,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4DE5D65AA3009E5983FA391746D5B2D3 /* Headers */ = {
+		5892F4ECB02730124790FF401D99ABF9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DBFCEF2901FC0D37C38E186D3C5FB46 /* EGMenuBar-umbrella.h in Headers */,
+				1D0966253A8C9E42C09DDDA84A4B685A /* EGMenuBar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,13 +185,13 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1B88B15CD672A9FCA31DAB357918EECE /* EGMenuBar */ = {
+		83AF973B33D46AFFC8F5B1B3725E207E /* EGMenuBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFD660196D8DE7703CB8A50F9B0043F8 /* Build configuration list for PBXNativeTarget "EGMenuBar" */;
+			buildConfigurationList = 981EC694493D051FFCD957E76BF9F703 /* Build configuration list for PBXNativeTarget "EGMenuBar" */;
 			buildPhases = (
-				71D8113E2E3CBA64458F085539E0BA34 /* Sources */,
-				841DD256969786BB57436076D3BB4559 /* Frameworks */,
-				4DE5D65AA3009E5983FA391746D5B2D3 /* Headers */,
+				556ECED2C45A521197927B74E5298EF3 /* Sources */,
+				8AB0CA8D954AA3B41B80C86A887E3ABB /* Frameworks */,
+				5892F4ECB02730124790FF401D99ABF9 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -261,20 +241,19 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B88B15CD672A9FCA31DAB357918EECE /* EGMenuBar */,
+				83AF973B33D46AFFC8F5B1B3725E207E /* EGMenuBar */,
 				D51809E094E6ED882625BF02966667DF /* Pods-EGMenuBar_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		71D8113E2E3CBA64458F085539E0BA34 /* Sources */ = {
+		556ECED2C45A521197927B74E5298EF3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				427D452BB8574A99D26CB65D0B90E386 /* EGMenuBar-dummy.m in Sources */,
-				AC05CB139F773E23A5155F073A1A75B2 /* EGMenuBar.swift in Sources */,
-				D06B7113F0CA6FBE9B134D81FEE85D69 /* EGMenuBarItem.swift in Sources */,
+				B78A4C36874FA27893549F9902534DF2 /* EGMenuBar-dummy.m in Sources */,
+				C2D5CED9ACE77BDFAE47CF034B29274A /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,12 +271,75 @@
 		AEFA1A23E5333E68DE077C1EDA6DBA37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EGMenuBar;
-			target = 1B88B15CD672A9FCA31DAB357918EECE /* EGMenuBar */;
+			target = 83AF973B33D46AFFC8F5B1B3725E207E /* EGMenuBar */;
 			targetProxy = 171DE876FE2C23674EE5FA02CC62A1EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2D99C675A5898D8D035ED1883954D8E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E97D4AF729812685A1524F84BC5A59 /* EGMenuBar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EGMenuBar/EGMenuBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EGMenuBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EGMenuBar/EGMenuBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EGMenuBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4A69D96496AF4CA37DDB1C03203DFADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E97D4AF729812685A1524F84BC5A59 /* EGMenuBar.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EGMenuBar/EGMenuBar-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EGMenuBar/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EGMenuBar/EGMenuBar.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EGMenuBar;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -339,38 +381,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		8E26DAE219A9ECD34A697840DB6BD6E5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1112128F41876D9A112A130F4024D2E8 /* EGMenuBar.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/EGMenuBar/EGMenuBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EGMenuBar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EGMenuBar/EGMenuBar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = EGMenuBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -485,37 +495,6 @@
 			};
 			name = Release;
 		};
-		DED5EF59B3F5E8D00F84AE644280BBCC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1112128F41876D9A112A130F4024D2E8 /* EGMenuBar.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/EGMenuBar/EGMenuBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EGMenuBar/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EGMenuBar/EGMenuBar.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = EGMenuBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -528,11 +507,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFD660196D8DE7703CB8A50F9B0043F8 /* Build configuration list for PBXNativeTarget "EGMenuBar" */ = {
+		981EC694493D051FFCD957E76BF9F703 /* Build configuration list for PBXNativeTarget "EGMenuBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E26DAE219A9ECD34A697840DB6BD6E5 /* Debug */,
-				DED5EF59B3F5E8D00F84AE644280BBCC /* Release */,
+				2D99C675A5898D8D035ED1883954D8E5 /* Debug */,
+				4A69D96496AF4CA37DDB1C03203DFADA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
