@@ -1,7 +1,8 @@
+
 use_frameworks!
 
 target 'EGMenuBar_Example' do
 
-  pod 'EGMenuBar', :path => '../'
+pod 'EGMenuBar', :path => '/Users/emilgras/Desktop/EGMenuBar'
 
 end

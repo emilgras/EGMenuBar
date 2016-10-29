@@ -8,19 +8,19 @@
 
 import UIKit
 
-protocol EGMenuViewDatasource: class {
+public protocol EGMenuViewDatasource: class {
     func numberOfItems() -> Int
     func itemImages() -> [UIImage]
     func itemTitles() -> [String]
 }
 
-protocol EGMenuViewDelegate: class {
+public protocol EGMenuViewDelegate: class {
     func didSelectItemAtIndex(menuView: EGMenuView, index: Int)
     func interItemSpacing(menuView: EGMenuView) -> Double // TODO: Make this optional
     func itemHeight(menuView: EGMenuView) -> Double
 }
 
-class EGMenuView: UIView {
+public class EGMenuView: UIView {
     
     // MARK: - Public Properties
     var itemHeight: CGFloat = 30
@@ -30,7 +30,7 @@ class EGMenuView: UIView {
     var menuBackgroundColor: UIColor = .whiteColor() // TODO: Should be read/write
     
     // MARK: - Public Methods
-    func show() {
+    public func show() {
         UIView.animateWithDuration(0.4) {
             self.alpha = 1
             self.transform = CGAffineTransformIdentity
@@ -76,7 +76,7 @@ class EGMenuView: UIView {
     }
     
     
-    func hide() {
+    public func hide() {
         
         UIView.animateWithDuration(0.3, delay: 0.1, options: .CurveEaseInOut, animations: {
             self.alpha = 0
@@ -156,12 +156,12 @@ class EGMenuView: UIView {
     
     
     // MARK: - Datasource & Delegate
-    weak var datasource: EGMenuViewDatasource? {
+    public weak var datasource: EGMenuViewDatasource? {
         didSet {
             
         }
     }
-    weak var delegate: EGMenuViewDelegate? {
+    public weak var delegate: EGMenuViewDelegate? {
         didSet {
             setupMenuView()
             setupMenuItems()
@@ -180,7 +180,7 @@ class EGMenuView: UIView {
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }

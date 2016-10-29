@@ -2,15 +2,15 @@ PODS:
   - EGMenuBar (0.1.0)
 
 DEPENDENCIES:
-  - EGMenuBar (from `../`)
+  - EGMenuBar (from `/Users/emilgras/Desktop/EGMenuBar`)
 
 EXTERNAL SOURCES:
   EGMenuBar:
-    :path: "../"
+    :path: "/Users/emilgras/Desktop/EGMenuBar"
 
 SPEC CHECKSUMS:
-  EGMenuBar: a163294833599116dc0288d1ebb3f9ec203f52f1
+  EGMenuBar: de86c0415abc8b0634374b8ed6c6eb1c66ff4155
 
-PODFILE CHECKSUM: 15df8e3dcecc18aadd2449c7087bd5be245d51aa
+PODFILE CHECKSUM: 63e9d06ad7048a30af61f3a1f3c5e6dbac440c25
 
 COCOAPODS: 1.1.0.rc.2

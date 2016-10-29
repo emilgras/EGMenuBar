@@ -1,9 +1,9 @@
 {
   "name": "EGMenuBar",
   "version": "0.1.0",
-  "summary": "A short description of EGMenuBar.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/EGMenuBar",
+  "summary": "A simple and elegant menu inspired by facebooks like animation",
+  "description": "Simple and elegant Menu Bar written in Swift. Inspired by facebooks like feature. Easy to use",
+  "homepage": "https://github.com/emilgras/EGMenuBar",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,11 @@
     "emilgras": "emil.gras@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/EGMenuBar.git",
+    "git": "https://github.com/emilgras/EGMenuBar.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "source_files": "EGMenuBar/Classes/**/*"
 }

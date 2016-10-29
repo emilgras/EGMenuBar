@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import EGMenuBar
+//import EGMenuBar
 
 class Tests: XCTestCase {
     
