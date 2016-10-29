@@ -1,6 +1,6 @@
 //
-//  EGMenuViewItem.swift
-//  EGMenuViewExample
+//  EGMenuBarItem.swift
+//  EGMenuBarExample
 //
 //  Created by Emil Gräs on 21/10/2016.
 //  Copyright © 2016 Emil Gräs. All rights reserved.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol EGMenuViewItemDelegate: class {
+protocol EGMenuBarItemDelegate: class {
     func didSelectItemAtIndex(index: Int)
 }
 
-class EGMenuViewItem: UIView {
+class EGMenuBarItem: UIView {
     
-    weak var delegate: EGMenuViewItemDelegate?
+    weak var delegate: EGMenuBarItemDelegate?
     
     var index: Int?
     
@@ -66,7 +66,7 @@ class EGMenuViewItem: UIView {
     }
     
     private func setupTapGesture() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(EGMenuViewItem.handleTap))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(EGMenuBarItem.handleTap))
         addGestureRecognizer(tap)
     }
     

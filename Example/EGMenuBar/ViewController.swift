@@ -16,27 +16,27 @@ class ViewController: UIViewController {
     @IBAction func showMenuButtonTapped(sender: AnyObject) {
         if showMenuButton.titleLabel?.text == "show" {
             showMenuButton.setTitle("hide", forState: .Normal)
-            menuView.show()
+            menuBar.show()
         } else {
             showMenuButton.setTitle("show", forState: .Normal)
-            menuView.hide()
+            menuBar.hide()
         }
     }
     
-    private let menuView = EGMenuView()
+    private let menuBar = EGMenuBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        menuView.datasource = self
-        menuView.delegate = self
-        menuView.center.x = view.center.x // remove later
-        menuView.center.y = view.center.y + 200
-        view.addSubview(menuView)
+        menuBar.datasource = self
+        menuBar.delegate = self
+        menuBar.center.x = view.center.x // remove later
+        menuBar.center.y = view.center.y + 200
+        view.addSubview(menuBar)
     }
     
 }
 
-extension ViewController: EGMenuViewDatasource {
+extension ViewController: EGMenuBarDatasource {
     func numberOfItems() -> Int {
         return 4
     }
@@ -50,17 +50,17 @@ extension ViewController: EGMenuViewDatasource {
     }
 }
 
-extension ViewController: EGMenuViewDelegate {
-    func didSelectItemAtIndex(menuView: EGMenuView, index: Int) {
+extension ViewController: EGMenuBarDelegate {
+    func didSelectItemAtIndex(menuView: EGMenuBar, index: Int) {
         self.showMenuButton.setTitle("show", forState: .Normal)
         menuView.hide()
     }
     
-    func interItemSpacing(menuView: EGMenuView) -> Double {
+    func interItemSpacing(menuView: EGMenuBar) -> Double {
         return 6
     }
     
-    func itemHeight(menuView: EGMenuView) -> Double {
+    func itemHeight(menuView: EGMenuBar) -> Double {
         return 60
     }
 }

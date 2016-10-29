@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01BCBCEE67372F39CC3CEBAD42F8A1D1 /* EGMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDDB2CEF215367C9BD35D4E36BB2419 /* EGMenuView.swift */; };
-		10FE690586CD8BA7014C70E663628144 /* EGMenuViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDBB5CFEAD111E8A389E97AB24864B0 /* EGMenuViewItem.swift */; };
 		1DBFCEF2901FC0D37C38E186D3C5FB46 /* EGMenuBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6073AEECB29AC1F6BD7A700CD0ECB1CF /* EGMenuBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		212C06E98B36D1A3D6FFE5B55DCA6A1F /* Pods-EGMenuBar_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49DE2B4F2473D2784E46AD4005EB80D6 /* Pods-EGMenuBar_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C78960EA3C0093F19AD8AFD4960D30B /* EGMenuBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D91DC6AC09B232933F8526684E4AB3B8 /* EGMenuBar-dummy.m */; };
+		427D452BB8574A99D26CB65D0B90E386 /* EGMenuBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D91DC6AC09B232933F8526684E4AB3B8 /* EGMenuBar-dummy.m */; };
 		52070CC817405ADF9396B16290453DCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		AC05CB139F773E23A5155F073A1A75B2 /* EGMenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A333553CDDBB51634116268A69337C89 /* EGMenuBar.swift */; };
 		CA506ADA822DCB320B3E73272697EF0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		D06B7113F0CA6FBE9B134D81FEE85D69 /* EGMenuBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EB051DA6236783679DBD7F16F7656B /* EGMenuBarItem.swift */; };
 		FA702102C72CE40430587BF313D28814 /* Pods-EGMenuBar_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A40AB90F224844703AEFCCE7AB9BA00 /* Pods-EGMenuBar_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,6 @@
 		2F64268D2EE40D7EA00813DAF4615724 /* Pods-EGMenuBar_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EGMenuBar_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		3F89A66A5C7C53A8E7C8237106EF9858 /* Pods-EGMenuBar_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EGMenuBar_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		49DE2B4F2473D2784E46AD4005EB80D6 /* Pods-EGMenuBar_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EGMenuBar_Example-umbrella.h"; sourceTree = "<group>"; };
-		4CDDB2CEF215367C9BD35D4E36BB2419 /* EGMenuView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EGMenuView.swift; sourceTree = "<group>"; };
 		5536EA00EBC9159D2654E4EA33411DF9 /* EGMenuBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EGMenuBar-prefix.pch"; sourceTree = "<group>"; };
 		56DADB898BE14C89EDEDFBFB8F072C12 /* EGMenuBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EGMenuBar.modulemap; sourceTree = "<group>"; };
 		5BB5B43F6ABB6CE85C0BBDB207AD49F2 /* Pods_EGMenuBar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EGMenuBar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,12 +43,13 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A40AB90F224844703AEFCCE7AB9BA00 /* Pods-EGMenuBar_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EGMenuBar_Example-dummy.m"; sourceTree = "<group>"; };
 		9AB5384669BD63E60E366C3F3C34B968 /* Pods-EGMenuBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EGMenuBar_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A333553CDDBB51634116268A69337C89 /* EGMenuBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EGMenuBar.swift; sourceTree = "<group>"; };
 		A6891AEA7490192B576715FC8486F2FF /* Pods-EGMenuBar_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EGMenuBar_Example-frameworks.sh"; sourceTree = "<group>"; };
 		C33DFA445E75B58790F00826DEC969BB /* Pods-EGMenuBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EGMenuBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C9EB051DA6236783679DBD7F16F7656B /* EGMenuBarItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EGMenuBarItem.swift; sourceTree = "<group>"; };
 		CD491FF856BC12086772447AA6FDD1AC /* EGMenuBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EGMenuBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D91DC6AC09B232933F8526684E4AB3B8 /* EGMenuBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EGMenuBar-dummy.m"; sourceTree = "<group>"; };
-		FEDBB5CFEAD111E8A389E97AB24864B0 /* EGMenuViewItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EGMenuViewItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,15 +72,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00D0CF0C49074B56F88FE49A7027F007 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				4CDDB2CEF215367C9BD35D4E36BB2419 /* EGMenuView.swift */,
-				FEDBB5CFEAD111E8A389E97AB24864B0 /* EGMenuViewItem.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		044B679A0480B0BC3445A7FF5907E80B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +93,15 @@
 				5BB5B43F6ABB6CE85C0BBDB207AD49F2 /* Pods_EGMenuBar_Example.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		11654830BD8C128E61614AFAB02C0CFE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A333553CDDBB51634116268A69337C89 /* EGMenuBar.swift */,
+				C9EB051DA6236783679DBD7F16F7656B /* EGMenuBarItem.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		1E689E37CFF79AEE9AC5824DDBE852B2 /* Pods-EGMenuBar_Example */ = {
@@ -159,7 +159,7 @@
 		7A6DF02D13AF684AB017FF86D4ECB509 /* EGMenuBar */ = {
 			isa = PBXGroup;
 			children = (
-				00D0CF0C49074B56F88FE49A7027F007 /* Classes */,
+				11654830BD8C128E61614AFAB02C0CFE /* Classes */,
 			);
 			path = EGMenuBar;
 			sourceTree = "<group>";
@@ -209,7 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFD660196D8DE7703CB8A50F9B0043F8 /* Build configuration list for PBXNativeTarget "EGMenuBar" */;
 			buildPhases = (
-				DD3A48E91F7FE419C31E20874D92639F /* Sources */,
+				71D8113E2E3CBA64458F085539E0BA34 /* Sources */,
 				841DD256969786BB57436076D3BB4559 /* Frameworks */,
 				4DE5D65AA3009E5983FA391746D5B2D3 /* Headers */,
 			);
@@ -268,21 +268,21 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		71D8113E2E3CBA64458F085539E0BA34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				427D452BB8574A99D26CB65D0B90E386 /* EGMenuBar-dummy.m in Sources */,
+				AC05CB139F773E23A5155F073A1A75B2 /* EGMenuBar.swift in Sources */,
+				D06B7113F0CA6FBE9B134D81FEE85D69 /* EGMenuBarItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		778BDE3A7486CE3926178974DC7116EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FA702102C72CE40430587BF313D28814 /* Pods-EGMenuBar_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DD3A48E91F7FE419C31E20874D92639F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3C78960EA3C0093F19AD8AFD4960D30B /* EGMenuBar-dummy.m in Sources */,
-				01BCBCEE67372F39CC3CEBAD42F8A1D1 /* EGMenuView.swift in Sources */,
-				10FE690586CD8BA7014C70E663628144 /* EGMenuViewItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

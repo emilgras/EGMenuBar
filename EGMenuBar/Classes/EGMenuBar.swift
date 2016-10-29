@@ -1,6 +1,6 @@
 //
-//  EGMenuView.swift
-//  EGMenuViewExample
+//  EGMenuBar.swift
+//  EGMenuBarExample
 //
 //  Created by Emil Gräs on 21/10/2016.
 //  Copyright © 2016 Emil Gräs. All rights reserved.
@@ -8,19 +8,19 @@
 
 import UIKit
 
-public protocol EGMenuViewDatasource: class {
+public protocol EGMenuBarDatasource: class {
     func numberOfItems() -> Int
     func itemImages() -> [UIImage]
     func itemTitles() -> [String]
 }
 
-public protocol EGMenuViewDelegate: class {
-    func didSelectItemAtIndex(menuView: EGMenuView, index: Int)
-    func interItemSpacing(menuView: EGMenuView) -> Double // TODO: Make this optional
-    func itemHeight(menuView: EGMenuView) -> Double
+public protocol EGMenuBarDelegate: class {
+    func didSelectItemAtIndex(menuView: EGMenuBar, index: Int)
+    func interItemSpacing(menuView: EGMenuBar) -> Double // TODO: Make this optional
+    func itemHeight(menuView: EGMenuBar) -> Double
 }
 
-public class EGMenuView: UIView {
+public class EGMenuBar: UIView {
     
     // MARK: - Public Properties
     var itemHeight: CGFloat = 30
@@ -156,12 +156,12 @@ public class EGMenuView: UIView {
     
     
     // MARK: - Datasource & Delegate
-    public weak var datasource: EGMenuViewDatasource? {
+    public weak var datasource: EGMenuBarDatasource? {
         didSet {
             
         }
     }
-    public weak var delegate: EGMenuViewDelegate? {
+    public weak var delegate: EGMenuBarDelegate? {
         didSet {
             setupMenuView()
             setupMenuItems()
@@ -171,7 +171,7 @@ public class EGMenuView: UIView {
     }
 
     // MARK: - Private
-    private var items: [Int: EGMenuViewItem] = [:]
+    private var items: [Int: EGMenuBarItem] = [:]
     private var itemCenterYConstraints: [NSLayoutConstraint] = []
     
     // MARK: - Life Cycle
@@ -224,9 +224,9 @@ public class EGMenuView: UIView {
     
     private func setupMenuItems() {
         if let numberOfItems = datasource?.numberOfItems() {
-            var previosItem: EGMenuViewItem? = nil
+            var previosItem: EGMenuBarItem? = nil
             for index in 0...numberOfItems-1 {
-                let item = EGMenuViewItem()
+                let item = EGMenuBarItem()
                 item.translatesAutoresizingMaskIntoConstraints = false
                 item.delegate = self
                 item.layer.cornerRadius = itemHeight / 2
@@ -242,7 +242,7 @@ public class EGMenuView: UIView {
         }
     }
     
-    private func setupContraintForItem(item: EGMenuViewItem, withIndex index: Int, previousItem prevItem: EGMenuViewItem?, lastItem: Bool) {
+    private func setupContraintForItem(item: EGMenuBarItem, withIndex index: Int, previousItem prevItem: EGMenuBarItem?, lastItem: Bool) {
         if let prevItem = prevItem where !lastItem {
             // middle items
             item.leadingAnchor.constraintEqualToAnchor(prevItem.trailingAnchor, constant: interItemSpacing).active = true
@@ -275,7 +275,7 @@ public class EGMenuView: UIView {
         
     }
     
-    private func setupInitialTransformForItem(item: EGMenuViewItem) {
+    private func setupInitialTransformForItem(item: EGMenuBarItem) {
         let scale = CGAffineTransformMakeScale(0.5, 0.5)
         item.transform = scale
     }
@@ -300,7 +300,7 @@ public class EGMenuView: UIView {
 
 
 
-extension EGMenuView: EGMenuViewItemDelegate {
+extension EGMenuBar: EGMenuBarItemDelegate {
     func didSelectItemAtIndex(index: Int) {
         delegate?.didSelectItemAtIndex(self, index: index)
     }
