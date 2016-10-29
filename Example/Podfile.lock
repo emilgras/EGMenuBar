@@ -1,0 +1,16 @@
+PODS:
+  - EGMenuBar (0.1.0)
+
+DEPENDENCIES:
+  - EGMenuBar (from `../`)
+
+EXTERNAL SOURCES:
+  EGMenuBar:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  EGMenuBar: a163294833599116dc0288d1ebb3f9ec203f52f1
+
+PODFILE CHECKSUM: 15df8e3dcecc18aadd2449c7087bd5be245d51aa
+
+COCOAPODS: 1.1.0.rc.2
