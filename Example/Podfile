@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EGMenuBar_Example' do
+  pod 'EGMenuBar', :path => '../'
+
+  target 'EGMenuBar_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
