@@ -1,4 +1,4 @@
-
+platform :ios, '9.0'
 use_frameworks!
 
 target 'EGMenuBar_Example' do
