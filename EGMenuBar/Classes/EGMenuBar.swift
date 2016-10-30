@@ -16,8 +16,8 @@ public protocol EGMenuBarDatasource: class {
 
 public protocol EGMenuBarDelegate: class {
     func didSelectItemAtIndex(menuBar: EGMenuBar, index: Int)
-    func interItemSpacing(menuBar: EGMenuBar) -> Double?
-    func itemHeight(menuBar: EGMenuBar) -> Double?
+    func interItemSpacing(menuBar: EGMenuBar) -> Double
+    func itemHeight(menuBar: EGMenuBar) -> Double
 }
 
 public class EGMenuBar: UIView {
@@ -154,12 +154,12 @@ public class EGMenuBar: UIView {
     
     
     // MARK: - Datasource & Delegate
-    weak var datasource: EGMenuBarDatasource? {
+    public weak var datasource: EGMenuBarDatasource? {
         didSet {
             
         }
     }
-    weak var delegate: EGMenuBarDelegate? {
+    public weak var delegate: EGMenuBarDelegate? {
         didSet {
             setupMenuView()
             setupMenuItems()
