@@ -190,10 +190,10 @@ public class EGMenuBar: UIView {
     // MARK: - Helper Methods
     
     private func setupMenuView() {
-        if let height = delegate?.itemHeight(self) {
+        if let height = delegate?.itemHeight?(self) {
             itemHeight = CGFloat(height)
         }
-        if let spacing = delegate?.interItemSpacing(self) {
+        if let spacing = delegate?.interItemSpacing?(self) {
             interItemSpacing = CGFloat(spacing)
         }
         if let numberOfItems = datasource?.numberOfItems() {
@@ -283,7 +283,7 @@ public class EGMenuBar: UIView {
 
 extension EGMenuBar: EGMenuBarItemDelegate {
     func didSelectItemAtIndex(index: Int) {
-        delegate?.didSelectItemAtIndex(self, index: index)
+        delegate?.didSelectItemAtIndex?(self, index: index)
     }
 }
 

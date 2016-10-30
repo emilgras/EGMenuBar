@@ -10,14 +10,14 @@ import UIKit
 
 public protocol EGMenuBarDatasource: class {
     func numberOfItems() -> Int
-    func itemImages() -> [UIImage]
-    func itemTitles() -> [String]
+    func imageForItemAtIndex(index: Int) -> UIImage
+    func titleForItemAtIndex(index: Int) -> String
 }
 
-public protocol EGMenuBarDelegate: class {
-    func didSelectItemAtIndex(menuView: EGMenuBar, index: Int)
-    func interItemSpacing(menuView: EGMenuBar) -> Double // TODO: Make this optional
-    func itemHeight(menuView: EGMenuBar) -> Double
+@objc public protocol EGMenuBarDelegate: class {
+    optional func didSelectItemAtIndex(menuView: EGMenuBar, index: Int)
+    optional func interItemSpacing(menuView: EGMenuBar) -> Double // TODO: Make this optional
+    optional func itemHeight(menuBar: EGMenuBar) -> Double
 }
 
 public class EGMenuBar: UIView {
@@ -165,8 +165,6 @@ public class EGMenuBar: UIView {
         didSet {
             setupMenuView()
             setupMenuItems()
-            setupMenuItemImages()
-            setupMenuItemTitles()
         }
     }
 
@@ -193,11 +191,11 @@ public class EGMenuBar: UIView {
     
     private func setupMenuView() {
         print("setup")
-        if let height = delegate?.itemHeight(self) {
+        if let height = delegate?.itemHeight?(self) {
             print("height: \(height)")
             itemHeight = CGFloat(height)
         }
-        if let spacing = delegate?.interItemSpacing(self) {
+        if let spacing = delegate?.interItemSpacing?(self) {
             print("spacing: \(spacing)")
             interItemSpacing = CGFloat(spacing)
         }
@@ -279,22 +277,6 @@ public class EGMenuBar: UIView {
         let scale = CGAffineTransformMakeScale(0.5, 0.5)
         item.transform = scale
     }
- 
-    private func setupMenuItemImages() {
-        if let images = datasource?.itemImages() {
-            for (index, image) in images.enumerate() {
-                items[index]?.image = image
-            }
-        }
-    }
-    
-    private func setupMenuItemTitles() {
-        if let titles = datasource?.itemTitles() {
-            for (index, title) in titles.enumerate() {
-                items[index]?.title = title
-            }
-        }
-    }
 
 }
 
@@ -302,7 +284,7 @@ public class EGMenuBar: UIView {
 
 extension EGMenuBar: EGMenuBarItemDelegate {
     func didSelectItemAtIndex(index: Int) {
-        delegate?.didSelectItemAtIndex(self, index: index)
+        delegate?.didSelectItemAtIndex?(self, index: index)
     }
 }
 
