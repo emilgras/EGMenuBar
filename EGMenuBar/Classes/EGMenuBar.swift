@@ -154,12 +154,12 @@ public class EGMenuBar: UIView {
     
     
     // MARK: - Datasource & Delegate
-    public weak var datasource: EGMenuBarDatasource? {
+    weak var datasource: EGMenuBarDatasource? {
         didSet {
             
         }
     }
-    public weak var delegate: EGMenuBarDelegate? {
+    weak var delegate: EGMenuBarDelegate? {
         didSet {
             setupMenuView()
             setupMenuItems()
