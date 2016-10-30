@@ -16,8 +16,8 @@ public protocol EGMenuBarDatasource: class {
 
 public protocol EGMenuBarDelegate: class {
     func didSelectItemAtIndex(menuBar: EGMenuBar, index: Int)
-    func interItemSpacing(menuBar: EGMenuBar) -> Double
-    func itemHeight(menuBar: EGMenuBar) -> Double
+    func interItemSpacing(menuBar: EGMenuBar) -> Double?
+    func itemHeight(menuBar: EGMenuBar) -> Double?
 }
 
 public class EGMenuBar: UIView {
