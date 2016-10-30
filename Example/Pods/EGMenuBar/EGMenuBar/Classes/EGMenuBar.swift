@@ -14,10 +14,10 @@ public protocol EGMenuBarDatasource: class {
     func titleForItemAtIndex(index: Int) -> String
 }
 
-@objc public protocol EGMenuBarDelegate: class {
-    optional func didSelectItemAtIndex(menuView: EGMenuBar, index: Int)
-    optional func interItemSpacing(menuView: EGMenuBar) -> Double // TODO: Make this optional
-    optional func itemHeight(menuBar: EGMenuBar) -> Double
+public protocol EGMenuBarDelegate: class {
+    func didSelectItemAtIndex(menuView: EGMenuBar, index: Int)
+    func interItemSpacing(menuView: EGMenuBar) -> Double // TODO: Make this optional
+    func itemHeight(menuBar: EGMenuBar) -> Double
 }
 
 public class EGMenuBar: UIView {
@@ -190,13 +190,10 @@ public class EGMenuBar: UIView {
     // MARK: - Helper Methods
     
     private func setupMenuView() {
-        print("setup")
-        if let height = delegate?.itemHeight?(self) {
-            print("height: \(height)")
+        if let height = delegate?.itemHeight(self) {
             itemHeight = CGFloat(height)
         }
-        if let spacing = delegate?.interItemSpacing?(self) {
-            print("spacing: \(spacing)")
+        if let spacing = delegate?.interItemSpacing(self) {
             interItemSpacing = CGFloat(spacing)
         }
         if let numberOfItems = datasource?.numberOfItems() {
@@ -286,7 +283,7 @@ public class EGMenuBar: UIView {
 
 extension EGMenuBar: EGMenuBarItemDelegate {
     func didSelectItemAtIndex(index: Int) {
-        delegate?.didSelectItemAtIndex?(self, index: index)
+        delegate?.didSelectItemAtIndex(self, index: index)
     }
 }
 
