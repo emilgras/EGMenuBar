@@ -74,7 +74,7 @@ public class EGMenuBar: UIView {
     }
     
     
-    public func hide() {
+    public func hide(completion: (done: Bool) -> Void) {
         
         UIView.animateWithDuration(0.3, delay: 0.1, options: .CurveEaseInOut, animations: {
             self.alpha = 0
@@ -95,7 +95,9 @@ public class EGMenuBar: UIView {
             item?.alpha = 0
             item?.transform = CGAffineTransformMakeScale(0.5, 0.5)
             self.layoutIfNeeded()
-            }, completion: nil)
+            }, completion: { (finished) in
+                if finished { completion(done: true) }
+            })
         
         UIView.animateWithDuration(0.7, delay: 0.05, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
             let item = self.items[2]
