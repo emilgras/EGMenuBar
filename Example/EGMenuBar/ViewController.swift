@@ -41,12 +41,12 @@ extension ViewController: EGMenuBarDatasource {
         return 4
     }
     
-    func imageForItemAtIndex(index: Int) -> UIImage {
-        return [UIImage(named: "video")!, UIImage(named: "video")!, UIImage(named: "video")!, UIImage(named: "video")!][index]
+    func itemImages() -> [UIImage] {
+        return [UIImage(named: "video")!, UIImage(named: "video")!, UIImage(named: "video")!, UIImage(named: "video")!]
     }
 
-    func titleForItemAtIndex(index: Int) -> String {
-        return ["video1", "video2", "video3", "video4"][index]
+    func itemTitles() -> [String] {
+        return ["video1", "video2", "video3", "video4"]
     }
 
 }
