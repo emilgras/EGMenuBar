@@ -231,6 +231,8 @@ public class EGMenuBar: UIView {
                 item.layer.masksToBounds = true
                 item.alpha = 0
                 item.index = index
+                item.image = datasource?.imageForItemAtIndex(index)
+                item.title = datasource?.titleForItemAtIndex(index)
                 items[index] = item
                 addSubview(item)
                 setupContraintForItem(item, withIndex: index, previousItem: previosItem, lastItem: index == numberOfItems - 1 ? true : false)

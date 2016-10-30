@@ -15,8 +15,8 @@ public protocol EGMenuBarDatasource: class {
 }
 
 @objc public protocol EGMenuBarDelegate: class {
-    optional func didSelectItemAtIndex(menuBar: EGMenuBar, index: Int)
-    optional func interItemSpacing(menuBar: EGMenuBar) -> Double
+    optional func didSelectItemAtIndex(menuView: EGMenuBar, index: Int)
+    optional func interItemSpacing(menuView: EGMenuBar) -> Double // TODO: Make this optional
     optional func itemHeight(menuBar: EGMenuBar) -> Double
 }
 
@@ -133,7 +133,7 @@ public class EGMenuBar: UIView {
         UIView.animateWithDuration(0.15, delay: 0, options: .CurveEaseInOut, animations: {
             self.alpha = 0
             }, completion: nil)
-
+        
         UIView.animateWithDuration(0.8, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
             let scale = CGAffineTransformMakeScale(0.9, 0.9)
             let transform = CGAffineTransformTranslate(scale, 0, 100)
@@ -146,13 +146,13 @@ public class EGMenuBar: UIView {
                 item.transform = CGAffineTransformMakeScale(0.5, 0.5)
                 self.layoutIfNeeded()
             }
-
+            
             }, completion: {(finsihed) in
                 completion(finished: true)
-            })
-
+        })
+        
     }
-
+    
     
     
     // MARK: - Datasource & Delegate
@@ -167,7 +167,7 @@ public class EGMenuBar: UIView {
             setupMenuItems()
         }
     }
-
+    
     // MARK: - Private
     private var items: [Int: EGMenuBarItem] = [:]
     private var itemCenterYConstraints: [NSLayoutConstraint] = []
@@ -190,10 +190,13 @@ public class EGMenuBar: UIView {
     // MARK: - Helper Methods
     
     private func setupMenuView() {
+        print("setup")
         if let height = delegate?.itemHeight?(self) {
+            print("height: \(height)")
             itemHeight = CGFloat(height)
         }
         if let spacing = delegate?.interItemSpacing?(self) {
+            print("spacing: \(spacing)")
             interItemSpacing = CGFloat(spacing)
         }
         if let numberOfItems = datasource?.numberOfItems() {
@@ -211,7 +214,7 @@ public class EGMenuBar: UIView {
         layer.shadowOpacity = 0.4
         layer.borderWidth = 0.4
         layer.borderColor = UIColor.darkGrayColor().CGColor
-
+        
         let scale = CGAffineTransformMakeScale(1, 1) // CGAffineTransformMakeScale(1, 1)
         let transform = CGAffineTransformTranslate(scale, 0, 10)
         self.transform = transform
@@ -276,7 +279,7 @@ public class EGMenuBar: UIView {
         let scale = CGAffineTransformMakeScale(0.5, 0.5)
         item.transform = scale
     }
-
+    
 }
 
 
@@ -286,6 +289,7 @@ extension EGMenuBar: EGMenuBarItemDelegate {
         delegate?.didSelectItemAtIndex?(self, index: index)
     }
 }
+
 
 
 
