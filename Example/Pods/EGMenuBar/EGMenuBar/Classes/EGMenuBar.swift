@@ -10,14 +10,14 @@ import UIKit
 
 public protocol EGMenuBarDatasource: class {
     func numberOfItems() -> Int
-    func imageForItemAtIndex(index: Int) -> UIImage
-    func titleForItemAtIndex(index: Int) -> String
+    func itemImages() -> [UIImage]
+    func itemTitles() -> [String]
 }
 
-@objc public protocol EGMenuBarDelegate: class {
-    optional func didSelectItemAtIndex(menuBar: EGMenuBar, index: Int)
-    optional func interItemSpacing(menuBar: EGMenuBar) -> Double
-    optional func itemHeight(menuBar: EGMenuBar) -> Double
+public protocol EGMenuBarDelegate: class {
+    func didSelectItemAtIndex(menuView: EGMenuBar, index: Int)
+    func interItemSpacing(menuView: EGMenuBar) -> Double // TODO: Make this optional
+    func itemHeight(menuView: EGMenuBar) -> Double
 }
 
 public class EGMenuBar: UIView {
@@ -165,6 +165,8 @@ public class EGMenuBar: UIView {
         didSet {
             setupMenuView()
             setupMenuItems()
+            setupMenuItemImages()
+            setupMenuItemTitles()
         }
     }
 
@@ -190,10 +192,13 @@ public class EGMenuBar: UIView {
     // MARK: - Helper Methods
     
     private func setupMenuView() {
+        print("setup")
         if let height = delegate?.itemHeight(self) {
+            print("height: \(height)")
             itemHeight = CGFloat(height)
         }
         if let spacing = delegate?.interItemSpacing(self) {
+            print("spacing: \(spacing)")
             interItemSpacing = CGFloat(spacing)
         }
         if let numberOfItems = datasource?.numberOfItems() {
@@ -228,8 +233,6 @@ public class EGMenuBar: UIView {
                 item.layer.masksToBounds = true
                 item.alpha = 0
                 item.index = index
-                item.image = datasource?.imageForItemAtIndex(index)
-                item.title = datasource?.titleForItemAtIndex(index)
                 items[index] = item
                 addSubview(item)
                 setupContraintForItem(item, withIndex: index, previousItem: previosItem, lastItem: index == numberOfItems - 1 ? true : false)
@@ -275,6 +278,22 @@ public class EGMenuBar: UIView {
     private func setupInitialTransformForItem(item: EGMenuBarItem) {
         let scale = CGAffineTransformMakeScale(0.5, 0.5)
         item.transform = scale
+    }
+ 
+    private func setupMenuItemImages() {
+        if let images = datasource?.itemImages() {
+            for (index, image) in images.enumerate() {
+                items[index]?.image = image
+            }
+        }
+    }
+    
+    private func setupMenuItemTitles() {
+        if let titles = datasource?.itemTitles() {
+            for (index, title) in titles.enumerate() {
+                items[index]?.title = title
+            }
+        }
     }
 
 }
