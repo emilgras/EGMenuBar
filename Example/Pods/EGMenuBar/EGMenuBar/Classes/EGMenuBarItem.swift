@@ -9,7 +9,7 @@
 import UIKit
 
 protocol EGMenuBarItemDelegate: class {
-    func didSelectItemAtIndex(index: Int)
+    func didSelectItemAtIndex(_ index: Int)
 }
 
 class EGMenuBarItem: UIView {
@@ -21,7 +21,7 @@ class EGMenuBarItem: UIView {
     var imageView: UIImageView = {
         var imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .ScaleAspectFit
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     
@@ -48,29 +48,29 @@ class EGMenuBarItem: UIView {
         commonInit()
     }
     
-    private func commonInit() {
+    fileprivate func commonInit() {
         setupView()
         setupTapGesture()
     }
     
-    private func setupView() {
+    fileprivate func setupView() {
         addSubview(imageView)
         setupImageViewConstraints()
     }
     
-    private func setupImageViewConstraints() {
-        imageView.leadingAnchor.constraintEqualToAnchor(leadingAnchor).active = true
-        imageView.trailingAnchor.constraintEqualToAnchor(trailingAnchor).active = true
-        imageView.topAnchor.constraintEqualToAnchor(topAnchor).active = true
-        imageView.bottomAnchor.constraintEqualToAnchor(bottomAnchor).active = true
+    fileprivate func setupImageViewConstraints() {
+        imageView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        imageView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
-    private func setupTapGesture() {
+    fileprivate func setupTapGesture() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(EGMenuBarItem.handleTap))
         addGestureRecognizer(tap)
     }
     
-    @objc private func handleTap() {
+    @objc fileprivate func handleTap() {
         if let index = index {
             delegate?.didSelectItemAtIndex(index)
         }

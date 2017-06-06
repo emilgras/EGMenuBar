@@ -15,140 +15,140 @@ public protocol EGMenuBarDatasource: class {
 }
 
 public protocol EGMenuBarDelegate: class {
-    func didSelectItemAtIndex(menuView: EGMenuBar, index: Int)
-    func interItemSpacing(menuView: EGMenuBar) -> Double // TODO: Make this optional
-    func itemHeight(menuView: EGMenuBar) -> Double
+    func didSelectItemAtIndex(_ menuView: EGMenuBar, index: Int)
+    func interItemSpacing(_ menuView: EGMenuBar) -> Double // TODO: Make this optional
+    func itemHeight(_ menuView: EGMenuBar) -> Double
 }
 
-public class EGMenuBar: UIView {
+open class EGMenuBar: UIView {
     
     // MARK: - Public Properties
     var itemHeight: CGFloat = 30
     var interItemSpacing: CGFloat = 10
     var menuHeight: CGFloat!
     var menuWidth: CGFloat!
-    var menuBackgroundColor: UIColor = .whiteColor() // TODO: Should be read/write
+    var menuBackgroundColor: UIColor = .white // TODO: Should be read/write
     
     // MARK: - Public Methods
-    public func show() {
-        UIView.animateWithDuration(0.4) {
+    open func show() {
+        UIView.animate(withDuration: 0.4, animations: {
             self.alpha = 1
-            self.transform = CGAffineTransformIdentity
-        }
+            self.transform = CGAffineTransform.identity
+        }) 
         
         
         
-        UIView.animateWithDuration(0.7, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.7, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: UIViewAnimationOptions(), animations: {
             let item = self.items[0]
             let constraint = self.itemCenterYConstraints[0]
             constraint.constant = 0
             item?.alpha = 1
-            item?.transform = CGAffineTransformIdentity
+            item?.transform = CGAffineTransform.identity
             self.layoutIfNeeded()
             }, completion: nil)
         
-        UIView.animateWithDuration(0.7, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.7, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: UIViewAnimationOptions(), animations: {
             let item = self.items[1]
             let constraint = self.itemCenterYConstraints[1]
             constraint.constant = 0
             item?.alpha = 1
-            item?.transform = CGAffineTransformIdentity
+            item?.transform = CGAffineTransform.identity
             self.layoutIfNeeded()
             }, completion: nil)
         
-        UIView.animateWithDuration(0.7, delay: 0.2, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.7, delay: 0.2, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: UIViewAnimationOptions(), animations: {
             let item = self.items[2]
             let constraint = self.itemCenterYConstraints[2]
             constraint.constant = 0
             item?.alpha = 1
-            item?.transform = CGAffineTransformIdentity
+            item?.transform = CGAffineTransform.identity
             self.layoutIfNeeded()
             }, completion: nil)
         
-        UIView.animateWithDuration(0.7, delay: 0.3, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.7, delay: 0.3, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: UIViewAnimationOptions(), animations: {
             let item = self.items[3]
             let constraint = self.itemCenterYConstraints[3]
             constraint.constant = 0
             item?.alpha = 1
-            item?.transform = CGAffineTransformIdentity
+            item?.transform = CGAffineTransform.identity
             self.layoutIfNeeded()
             }, completion: nil)
     }
     
     
-    public func hide() {
+    open func hide() {
         
-        UIView.animateWithDuration(0.3, delay: 0.1, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.1, options: UIViewAnimationOptions(), animations: {
             self.alpha = 0
             }, completion: nil)
         
-        UIView.animateWithDuration(0.4, delay: 0.0, options: .CurveEaseInOut, animations: {
-            let scale = CGAffineTransformMakeScale(0.9, 0.9)
-            let transform = CGAffineTransformTranslate(scale, 0, 15)
+        UIView.animate(withDuration: 0.4, delay: 0.0, options: UIViewAnimationOptions(), animations: {
+            let scale = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            let transform = scale.translatedBy(x: 0, y: 15)
             self.transform = transform
             }, completion: nil)
         
         
         
-        UIView.animateWithDuration(0.8, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.8, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: UIViewAnimationOptions(), animations: {
             let item = self.items[3]
             let constraint = self.itemCenterYConstraints[3]
             constraint.constant = 100
             item?.alpha = 0
-            item?.transform = CGAffineTransformMakeScale(0.5, 0.5)
+            item?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
             self.layoutIfNeeded()
             }, completion: nil)
         
-        UIView.animateWithDuration(0.7, delay: 0.05, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.7, delay: 0.05, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: UIViewAnimationOptions(), animations: {
             let item = self.items[2]
             let constraint = self.itemCenterYConstraints[2]
             constraint.constant = 100
             item?.alpha = 0
-            item?.transform = CGAffineTransformMakeScale(0.5, 0.5)
+            item?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
             self.layoutIfNeeded()
             }, completion: nil)
         
-        UIView.animateWithDuration(0.6, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.6, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: UIViewAnimationOptions(), animations: {
             let item = self.items[1]
             let constraint = self.itemCenterYConstraints[1]
             constraint.constant = 100
             item?.alpha = 0
-            item?.transform = CGAffineTransformMakeScale(0.5, 0.5)
+            item?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
             self.layoutIfNeeded()
             }, completion: nil)
         
-        UIView.animateWithDuration(0.5, delay: 0.15, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.15, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: UIViewAnimationOptions(), animations: {
             let item = self.items[0]
             let constraint = self.itemCenterYConstraints[0]
             constraint.constant = 100
             item?.alpha = 0
-            item?.transform = CGAffineTransformMakeScale(0.5, 0.5)
+            item?.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
             self.layoutIfNeeded()
             }, completion: nil)
     }
     
     /// not used yet
-    func itemSelected(completion: (finished: Bool) -> Void) {
+    func itemSelected(_ completion: @escaping (_ finished: Bool) -> Void) {
         
-        UIView.animateWithDuration(0.15, delay: 0, options: .CurveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.15, delay: 0, options: UIViewAnimationOptions(), animations: {
             self.alpha = 0
             }, completion: nil)
 
-        UIView.animateWithDuration(0.8, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: .CurveEaseInOut, animations: {
-            let scale = CGAffineTransformMakeScale(0.9, 0.9)
-            let transform = CGAffineTransformTranslate(scale, 0, 100)
+        UIView.animate(withDuration: 0.8, delay: 0.0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.9, options: UIViewAnimationOptions(), animations: {
+            let scale = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            let transform = scale.translatedBy(x: 0, y: 100)
             self.transform = transform
             
             for (index, item) in self.items {
                 let constraint = self.itemCenterYConstraints[index]
                 constraint.constant = 100
                 item.alpha = 0
-                item.transform = CGAffineTransformMakeScale(0.5, 0.5)
+                item.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
                 self.layoutIfNeeded()
             }
 
             }, completion: {(finsihed) in
-                completion(finished: true)
+                completion(true)
             })
 
     }
@@ -156,12 +156,12 @@ public class EGMenuBar: UIView {
     
     
     // MARK: - Datasource & Delegate
-    public weak var datasource: EGMenuBarDatasource? {
+    open weak var datasource: EGMenuBarDatasource? {
         didSet {
             
         }
     }
-    public weak var delegate: EGMenuBarDelegate? {
+    open weak var delegate: EGMenuBarDelegate? {
         didSet {
             setupMenuView()
             setupMenuItems()
@@ -171,8 +171,8 @@ public class EGMenuBar: UIView {
     }
 
     // MARK: - Private
-    private var items: [Int: EGMenuBarItem] = [:]
-    private var itemCenterYConstraints: [NSLayoutConstraint] = []
+    fileprivate var items: [Int: EGMenuBarItem] = [:]
+    fileprivate var itemCenterYConstraints: [NSLayoutConstraint] = []
     
     // MARK: - Life Cycle
     override init(frame: CGRect) {
@@ -185,13 +185,13 @@ public class EGMenuBar: UIView {
         commonInit()
     }
     
-    private func commonInit() {
+    fileprivate func commonInit() {
         
     }
     
     // MARK: - Helper Methods
     
-    private func setupMenuView() {
+    fileprivate func setupMenuView() {
         print("setup")
         if let height = delegate?.itemHeight(self) {
             print("height: \(height)")
@@ -204,25 +204,25 @@ public class EGMenuBar: UIView {
         if let numberOfItems = datasource?.numberOfItems() {
             menuHeight =  itemHeight + (interItemSpacing * 2)
             menuWidth = (CGFloat(numberOfItems) * itemHeight) + ((CGFloat(numberOfItems) + 1) * interItemSpacing)
-            frame = CGRectMake(0, 0, menuWidth, menuHeight)
+            frame = CGRect(x: 0, y: 0, width: menuWidth, height: menuHeight)
         }
         
         alpha = 0
         backgroundColor = menuBackgroundColor
         layer.cornerRadius = menuHeight / 2
-        layer.shadowOffset = CGSizeMake(0, 0)
-        layer.shadowColor = UIColor.blackColor().CGColor
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowColor = UIColor.black.cgColor
         layer.shadowRadius = 6.0
         layer.shadowOpacity = 0.4
         layer.borderWidth = 0.4
-        layer.borderColor = UIColor.darkGrayColor().CGColor
+        layer.borderColor = UIColor.darkGray.cgColor
 
-        let scale = CGAffineTransformMakeScale(1, 1) // CGAffineTransformMakeScale(1, 1)
-        let transform = CGAffineTransformTranslate(scale, 0, 10)
+        let scale = CGAffineTransform(scaleX: 1, y: 1) // CGAffineTransformMakeScale(1, 1)
+        let transform = scale.translatedBy(x: 0, y: 10)
         self.transform = transform
     }
     
-    private func setupMenuItems() {
+    fileprivate func setupMenuItems() {
         if let numberOfItems = datasource?.numberOfItems() {
             var previosItem: EGMenuBarItem? = nil
             for index in 0...numberOfItems-1 {
@@ -242,55 +242,55 @@ public class EGMenuBar: UIView {
         }
     }
     
-    private func setupContraintForItem(item: EGMenuBarItem, withIndex index: Int, previousItem prevItem: EGMenuBarItem?, lastItem: Bool) {
-        if let prevItem = prevItem where !lastItem {
+    fileprivate func setupContraintForItem(_ item: EGMenuBarItem, withIndex index: Int, previousItem prevItem: EGMenuBarItem?, lastItem: Bool) {
+        if let prevItem = prevItem, !lastItem {
             // middle items
-            item.leadingAnchor.constraintEqualToAnchor(prevItem.trailingAnchor, constant: interItemSpacing).active = true
-            let centerYConstraint = item.centerYAnchor.constraintEqualToAnchor(centerYAnchor)
+            item.leadingAnchor.constraint(equalTo: prevItem.trailingAnchor, constant: interItemSpacing).isActive = true
+            let centerYConstraint = item.centerYAnchor.constraint(equalTo: centerYAnchor)
             centerYConstraint.constant = 100
-            centerYConstraint.active = true
+            centerYConstraint.isActive = true
             self.itemCenterYConstraints.append(centerYConstraint)
-            item.widthAnchor.constraintEqualToConstant(itemHeight).active = true
-            item.heightAnchor.constraintEqualToConstant(itemHeight).active = true
-        } else if let prevItem = prevItem where lastItem {
+            item.widthAnchor.constraint(equalToConstant: itemHeight).isActive = true
+            item.heightAnchor.constraint(equalToConstant: itemHeight).isActive = true
+        } else if let prevItem = prevItem, lastItem {
             // last item
-            item.leadingAnchor.constraintEqualToAnchor(prevItem.trailingAnchor, constant: interItemSpacing).active = true
-            item.trailingAnchor.constraintEqualToAnchor(trailingAnchor, constant: -interItemSpacing).active = true
-            let centerYConstraint = item.centerYAnchor.constraintEqualToAnchor(centerYAnchor)
+            item.leadingAnchor.constraint(equalTo: prevItem.trailingAnchor, constant: interItemSpacing).isActive = true
+            item.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -interItemSpacing).isActive = true
+            let centerYConstraint = item.centerYAnchor.constraint(equalTo: centerYAnchor)
             centerYConstraint.constant = 100
-            centerYConstraint.active = true
+            centerYConstraint.isActive = true
             self.itemCenterYConstraints.append(centerYConstraint)
-            item.widthAnchor.constraintEqualToConstant(itemHeight).active = true
-            item.heightAnchor.constraintEqualToConstant(itemHeight).active = true
+            item.widthAnchor.constraint(equalToConstant: itemHeight).isActive = true
+            item.heightAnchor.constraint(equalToConstant: itemHeight).isActive = true
         } else {
             // first item
-            item.leadingAnchor.constraintEqualToAnchor(leadingAnchor, constant: interItemSpacing).active = true
-            let centerYConstraint = item.centerYAnchor.constraintEqualToAnchor(centerYAnchor)
+            item.leadingAnchor.constraint(equalTo: leadingAnchor, constant: interItemSpacing).isActive = true
+            let centerYConstraint = item.centerYAnchor.constraint(equalTo: centerYAnchor)
             centerYConstraint.constant = 100
-            centerYConstraint.active = true
+            centerYConstraint.isActive = true
             self.itemCenterYConstraints.append(centerYConstraint)
-            item.widthAnchor.constraintEqualToConstant(itemHeight).active = true
-            item.heightAnchor.constraintEqualToConstant(itemHeight).active = true
+            item.widthAnchor.constraint(equalToConstant: itemHeight).isActive = true
+            item.heightAnchor.constraint(equalToConstant: itemHeight).isActive = true
         }
         
     }
     
-    private func setupInitialTransformForItem(item: EGMenuBarItem) {
-        let scale = CGAffineTransformMakeScale(0.5, 0.5)
+    fileprivate func setupInitialTransformForItem(_ item: EGMenuBarItem) {
+        let scale = CGAffineTransform(scaleX: 0.5, y: 0.5)
         item.transform = scale
     }
  
-    private func setupMenuItemImages() {
+    fileprivate func setupMenuItemImages() {
         if let images = datasource?.itemImages() {
-            for (index, image) in images.enumerate() {
+            for (index, image) in images.enumerated() {
                 items[index]?.image = image
             }
         }
     }
     
-    private func setupMenuItemTitles() {
+    fileprivate func setupMenuItemTitles() {
         if let titles = datasource?.itemTitles() {
-            for (index, title) in titles.enumerate() {
+            for (index, title) in titles.enumerated() {
                 items[index]?.title = title
             }
         }
@@ -301,7 +301,7 @@ public class EGMenuBar: UIView {
 
 
 extension EGMenuBar: EGMenuBarItemDelegate {
-    func didSelectItemAtIndex(index: Int) {
+    func didSelectItemAtIndex(_ index: Int) {
         delegate?.didSelectItemAtIndex(self, index: index)
     }
 }

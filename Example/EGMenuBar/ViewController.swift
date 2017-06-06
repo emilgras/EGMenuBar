@@ -13,17 +13,17 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var showMenuButton: UIButton!
     
-    @IBAction func showMenuButtonTapped(sender: AnyObject) {
+    @IBAction func showMenuButtonTapped(_ sender: AnyObject) {
         if showMenuButton.titleLabel?.text == "show" {
-            showMenuButton.setTitle("hide", forState: .Normal)
+            showMenuButton.setTitle("hide", for: UIControlState())
             menuBar.show()
         } else {
-            showMenuButton.setTitle("show", forState: .Normal)
+            showMenuButton.setTitle("show", for: UIControlState())
             menuBar.hide()
         }
     }
     
-    private let menuBar = EGMenuBar()
+    fileprivate let menuBar = EGMenuBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,16 +52,16 @@ extension ViewController: EGMenuBarDatasource {
 }
 
 extension ViewController: EGMenuBarDelegate {
-    func didSelectItemAtIndex(menuView: EGMenuBar, index: Int) {
-        self.showMenuButton.setTitle("show", forState: .Normal)
+    func didSelectItemAtIndex(_ menuView: EGMenuBar, index: Int) {
+        self.showMenuButton.setTitle("show", for: UIControlState())
         menuView.hide()
     }
     
-    func interItemSpacing(menuView: EGMenuBar) -> Double {
+    func interItemSpacing(_ menuView: EGMenuBar) -> Double {
         return 6
     }
     
-    func itemHeight(menuView: EGMenuBar) -> Double {
+    func itemHeight(_ menuView: EGMenuBar) -> Double {
         return 60
     }
 }
